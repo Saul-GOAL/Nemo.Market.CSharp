@@ -18,6 +18,8 @@ namespace Nemo.Market.Kata.Tests
             var pipe = new Pipe();
             project.Add( pipe );
             var pipes = project.GetPipes();
+            
+            //Assert
             Assert.AreEqual(1, pipes.Count());
             Assert.AreSame(pipe, pipes.First());
         }

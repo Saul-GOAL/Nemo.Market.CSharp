@@ -4,23 +4,21 @@ using System.Drawing;
 
 namespace Nemo.Market.Kata.Classes
 {
-    public class Building
+    public class Building : SetPositionAbstract
     {
         public Building()
         {
         }
 
-        public Point Position { get; private set; }
         public int Consumption { get; set; }
-
-        internal void SetPosition(Point point)
-        {
-            throw new NotImplementedException();
-        }
 
         internal void SetConsumption(int consumption)
         {
-            throw new NotImplementedException();
+            if ((consumption < 1)||(consumption > 20))
+                throw new ArgumentOutOfRangeException();
+            this.Consumption=consumption;
         }
+
+
     }
 }

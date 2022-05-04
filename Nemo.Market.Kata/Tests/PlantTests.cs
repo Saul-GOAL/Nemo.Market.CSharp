@@ -14,6 +14,7 @@ namespace Nemo.Market.Kata.Tests
         public void power_plant_has_default_position_0_0()
         {
             PowerPlant plant = new PowerPlant();
+
             Assert.AreEqual( 0, plant.Position.X );
             Assert.AreEqual( 0, plant.Position.Y );
         }
